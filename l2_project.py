@@ -318,6 +318,27 @@ class RegressionLearning:
         # f"{results_df.idxmax()[1:]} \n \n"
         # f"{results_df.loc[results_df.idxmax()[1:]]}")
 
+    def calculate_min_r2(self):
+        """
+        Creates a Tabular for Min R2 value from r2_results data
+        """
+        min_r2_dict = {"Method Used": [], "Random State": [], "Min R2": []}
+        for result_col in self.r2_results.keys():
+            if result_col == "Random State":
+                continue
+            column_r2_data = self.r2_results[result_col].copy()
+            column_r2_data.sort()
+            min_r2 = column_r2_data[0]
+            row = self.r2_results[result_col].index(min_r2)
+            random_state = self.r2_results["Random State"][row]
+            min_r2_dict["Method Used"].append(result_col)
+            min_r2_dict["Min R2"].append(min_r2)
+            min_r2_dict["Random State"].append(random_state)
+
+        min_r2_dict = pd.DataFrame(data=min_r2_dict)
+        log.logger.info("==================  Lowest R2 Values ==================\n"
+                        f"{min_r2_dict}")
+
     def run(self):
         """
         Runs regression learning model using different techniques
@@ -342,6 +363,7 @@ class RegressionLearning:
                         # f"{results_df.to_string()}")
                         f"{results_df}")
         self.calculate_max_r2()
+        self.calculate_min_r2()
 
         breakpoint()
 
