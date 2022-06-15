@@ -1,0 +1,215 @@
+2022-06-09 14:17:15,795 - REGRESSION-LEARNING-DEBUG - Logs will be stored in /var/tmp/regression_learning_20220609141715.log
+2022-06-09 14:17:15,796 - REGRESSION-LEARNING-INFO  - ===== Starting Regression Learning =====
+2022-06-09 14:17:15,796 - REGRESSION-LEARNING-INFO  - Reading data from ./gr5regression.csv
+2022-06-09 14:17:15,804 - REGRESSION-LEARNING-INFO  - Continuous Columns are : ['Life expectancy', 'Adult Mortality', 'infant deaths', 'Alcohol', 'percentage expenditure', 'Hepatitis B', 'Measles', 'BMI', 'under-five deaths', 'Polio', 'Total expenditure', 'Diphtheria', 'HIV/AIDS', 'GDP', 'Population', 'thinness  1-19 years', 'thinness 5-9 years', 'Income composition of resources', 'Schooling']
+2022-06-09 14:17:15,804 - REGRESSION-LEARNING-INFO  - ========= Method: Mode_or_Median =========
+2022-06-09 14:17:15,804 - REGRESSION-LEARNING-INFO  - Replacing empty data with either mode / median
+2022-06-09 14:17:15,811 - REGRESSION-LEARNING-INFO  - Calculating highly correlated columns
+2022-06-09 14:17:15,815 - REGRESSION-LEARNING-DEBUG - infant deaths and under-five deaths are highly correlated:  0.996628882039801
+2022-06-09 14:17:15,816 - REGRESSION-LEARNING-DEBUG - percentage expenditure and GDP are highly correlated:  0.9018191027160023
+2022-06-09 14:17:15,818 - REGRESSION-LEARNING-DEBUG - thinness  1-19 years and thinness 5-9 years are highly correlated:  0.9391873974004579
+2022-06-09 14:17:15,819 - REGRESSION-LEARNING-INFO  - Dropping highly correlated columns dict_keys(['infant deaths', 'percentage expenditure', 'thinness  1-19 years'])
+2022-06-09 14:17:15,819 - REGRESSION-LEARNING-INFO  - Formulating R2 using Mode_or_Median
+2022-06-09 14:17:19,032 - REGRESSION-LEARNING-INFO  - ========= Method: KNNImputer =========
+2022-06-09 14:17:19,032 - REGRESSION-LEARNING-INFO  - Replacing empty data using KNN Imputer method
+2022-06-09 14:17:19,356 - REGRESSION-LEARNING-INFO  - Calculating highly correlated columns
+2022-06-09 14:17:19,361 - REGRESSION-LEARNING-DEBUG - infant deaths and under-five deaths are highly correlated:  0.996628882039801
+2022-06-09 14:17:19,365 - REGRESSION-LEARNING-DEBUG - thinness  1-19 years and thinness 5-9 years are highly correlated:  0.9392700801649311
+2022-06-09 14:17:19,366 - REGRESSION-LEARNING-INFO  - Dropping highly correlated columns dict_keys(['infant deaths', 'thinness  1-19 years'])
+2022-06-09 14:17:19,367 - REGRESSION-LEARNING-INFO  - Formulating R2 using KNNImputer
+2022-06-09 14:17:22,132 - REGRESSION-LEARNING-INFO  - ========= Method: Normalisation =========
+2022-06-09 14:17:22,132 - REGRESSION-LEARNING-INFO  - Normalising all continuous columns 
+2022-06-09 14:17:22,132 - REGRESSION-LEARNING-INFO  - Replacing empty data using KNN Imputer method
+2022-06-09 14:17:22,354 - REGRESSION-LEARNING-INFO  - Normalised all continuous columns 
+2022-06-09 14:17:22,354 - REGRESSION-LEARNING-INFO  - Calculating highly correlated columns
+2022-06-09 14:17:22,358 - REGRESSION-LEARNING-DEBUG - infant deaths and under-five deaths are highly correlated:  0.9966288820398042
+2022-06-09 14:17:22,361 - REGRESSION-LEARNING-DEBUG - thinness  1-19 years and thinness 5-9 years are highly correlated:  0.9392700801649325
+2022-06-09 14:17:22,362 - REGRESSION-LEARNING-INFO  - Dropping highly correlated columns dict_keys(['infant deaths', 'thinness  1-19 years'])
+2022-06-09 14:17:22,363 - REGRESSION-LEARNING-INFO  - Formulating R2 using Normalisation
+2022-06-09 14:17:25,139 - REGRESSION-LEARNING-INFO  - ========= Method: Standardisation =========
+2022-06-09 14:17:25,139 - REGRESSION-LEARNING-INFO  - Standardising all continuous columns 
+2022-06-09 14:17:25,139 - REGRESSION-LEARNING-INFO  - Replacing empty data using KNN Imputer method
+2022-06-09 14:17:25,372 - REGRESSION-LEARNING-INFO  - Standardised all continuous columns 
+2022-06-09 14:17:25,372 - REGRESSION-LEARNING-INFO  - Calculating highly correlated columns
+2022-06-09 14:17:25,376 - REGRESSION-LEARNING-DEBUG - infant deaths and under-five deaths are highly correlated:  0.9966288820398009
+2022-06-09 14:17:25,380 - REGRESSION-LEARNING-DEBUG - thinness  1-19 years and thinness 5-9 years are highly correlated:  0.9392700801649303
+2022-06-09 14:17:25,380 - REGRESSION-LEARNING-INFO  - Dropping highly correlated columns dict_keys(['infant deaths', 'thinness  1-19 years'])
+2022-06-09 14:17:25,382 - REGRESSION-LEARNING-INFO  - Formulating R2 using Standardisation
+2022-06-09 14:17:27,964 - REGRESSION-LEARNING-INFO  - ========= Method: PCA1 =========
+2022-06-09 14:17:27,964 - REGRESSION-LEARNING-INFO  - Reducing dimensionality using PCA
+2022-06-09 14:17:27,964 - REGRESSION-LEARNING-INFO  - Removing columns with missing data more than 10%
+2022-06-09 14:17:27,967 - REGRESSION-LEARNING-INFO  - Replacing empty data using KNN Imputer method
+2022-06-09 14:17:28,044 - REGRESSION-LEARNING-INFO  - Processing Outliers
+2022-06-09 14:17:28,052 - REGRESSION-LEARNING-DEBUG - Dropping 12 outliers from 'Life expectancy' 
+2022-06-09 14:17:28,052 - REGRESSION-LEARNING-DEBUG - Dropping 82 outliers from 'Adult Mortality' 
+2022-06-09 14:17:28,052 - REGRESSION-LEARNING-DEBUG - Dropping 315 outliers from 'infant deaths' 
+2022-06-09 14:17:28,052 - REGRESSION-LEARNING-DEBUG - Dropping 1 outliers from 'Alcohol' 
+2022-06-09 14:17:28,052 - REGRESSION-LEARNING-DEBUG - Dropping 389 outliers from 'percentage expenditure' 
+2022-06-09 14:17:28,052 - REGRESSION-LEARNING-DEBUG - Dropping column Measles as it has 542 outliers ie > 5%
+2022-06-09 14:17:28,053 - REGRESSION-LEARNING-DEBUG - Dropping 394 outliers from 'under-five deaths' 
+2022-06-09 14:17:28,053 - REGRESSION-LEARNING-DEBUG - Dropping 280 outliers from 'Polio' 
+2022-06-09 14:17:28,054 - REGRESSION-LEARNING-DEBUG - Dropping 37 outliers from 'Total expenditure' 
+2022-06-09 14:17:28,054 - REGRESSION-LEARNING-DEBUG - Dropping 300 outliers from 'Diphtheria' 
+2022-06-09 14:17:28,054 - REGRESSION-LEARNING-DEBUG - Dropping column HIV/AIDS as it has 542 outliers ie > 5%
+2022-06-09 14:17:28,054 - REGRESSION-LEARNING-DEBUG - Dropping 89 outliers from 'thinness  1-19 years' 
+2022-06-09 14:17:28,054 - REGRESSION-LEARNING-DEBUG - Dropping 99 outliers from 'thinness 5-9 years' 
+2022-06-09 14:17:28,054 - REGRESSION-LEARNING-DEBUG - Dropping 132 outliers from 'Income composition of resources' 
+2022-06-09 14:17:28,054 - REGRESSION-LEARNING-DEBUG - Dropping 40 outliers from 'Schooling' 
+2022-06-09 14:17:28,055 - REGRESSION-LEARNING-INFO  - Total outliers removed are 1244
+2022-06-09 14:17:28,055 - REGRESSION-LEARNING-INFO  - One hot encoding discrete columns which has < 8 unique values
+2022-06-09 14:17:28,055 - REGRESSION-LEARNING-DEBUG - Number of unique values of Country are 166
+2022-06-09 14:17:28,056 - REGRESSION-LEARNING-DEBUG - Number of unique values of Year are 16
+2022-06-09 14:17:28,056 - REGRESSION-LEARNING-DEBUG - Number of unique values of Status are 2
+2022-06-09 14:17:28,056 - REGRESSION-LEARNING-INFO  - Encoding 'Status' column
+2022-06-09 14:17:28,063 - REGRESSION-LEARNING-INFO  - Variance ratio : [0.88454714]
+2022-06-09 14:17:28,063 - REGRESSION-LEARNING-INFO  - Formulating R2 using PCA1
+2022-06-09 14:17:28,346 - REGRESSION-LEARNING-INFO  - ========= Method: PCA2 =========
+2022-06-09 14:17:28,347 - REGRESSION-LEARNING-INFO  - Reducing dimensionality using PCA
+2022-06-09 14:17:28,347 - REGRESSION-LEARNING-INFO  - Removing columns with missing data more than 10%
+2022-06-09 14:17:28,348 - REGRESSION-LEARNING-INFO  - Replacing empty data using KNN Imputer method
+2022-06-09 14:17:28,417 - REGRESSION-LEARNING-INFO  - Processing Outliers
+2022-06-09 14:17:28,425 - REGRESSION-LEARNING-DEBUG - Dropping 12 outliers from 'Life expectancy' 
+2022-06-09 14:17:28,425 - REGRESSION-LEARNING-DEBUG - Dropping 82 outliers from 'Adult Mortality' 
+2022-06-09 14:17:28,425 - REGRESSION-LEARNING-DEBUG - Dropping 315 outliers from 'infant deaths' 
+2022-06-09 14:17:28,425 - REGRESSION-LEARNING-DEBUG - Dropping 1 outliers from 'Alcohol' 
+2022-06-09 14:17:28,426 - REGRESSION-LEARNING-DEBUG - Dropping 389 outliers from 'percentage expenditure' 
+2022-06-09 14:17:28,426 - REGRESSION-LEARNING-DEBUG - Dropping column Measles as it has 542 outliers ie > 5%
+2022-06-09 14:17:28,427 - REGRESSION-LEARNING-DEBUG - Dropping 394 outliers from 'under-five deaths' 
+2022-06-09 14:17:28,427 - REGRESSION-LEARNING-DEBUG - Dropping 280 outliers from 'Polio' 
+2022-06-09 14:17:28,427 - REGRESSION-LEARNING-DEBUG - Dropping 37 outliers from 'Total expenditure' 
+2022-06-09 14:17:28,427 - REGRESSION-LEARNING-DEBUG - Dropping 300 outliers from 'Diphtheria' 
+2022-06-09 14:17:28,427 - REGRESSION-LEARNING-DEBUG - Dropping column HIV/AIDS as it has 542 outliers ie > 5%
+2022-06-09 14:17:28,427 - REGRESSION-LEARNING-DEBUG - Dropping 89 outliers from 'thinness  1-19 years' 
+2022-06-09 14:17:28,427 - REGRESSION-LEARNING-DEBUG - Dropping 99 outliers from 'thinness 5-9 years' 
+2022-06-09 14:17:28,428 - REGRESSION-LEARNING-DEBUG - Dropping 132 outliers from 'Income composition of resources' 
+2022-06-09 14:17:28,428 - REGRESSION-LEARNING-DEBUG - Dropping 40 outliers from 'Schooling' 
+2022-06-09 14:17:28,428 - REGRESSION-LEARNING-INFO  - Total outliers removed are 1244
+2022-06-09 14:17:28,428 - REGRESSION-LEARNING-INFO  - One hot encoding discrete columns which has < 8 unique values
+2022-06-09 14:17:28,429 - REGRESSION-LEARNING-DEBUG - Number of unique values of Country are 166
+2022-06-09 14:17:28,429 - REGRESSION-LEARNING-DEBUG - Number of unique values of Year are 16
+2022-06-09 14:17:28,429 - REGRESSION-LEARNING-DEBUG - Number of unique values of Status are 2
+2022-06-09 14:17:28,429 - REGRESSION-LEARNING-INFO  - Encoding 'Status' column
+2022-06-09 14:17:28,435 - REGRESSION-LEARNING-INFO  - Variance ratio : [0.88454714 0.10483052]
+2022-06-09 14:17:28,436 - REGRESSION-LEARNING-INFO  - Formulating R2 using PCA2
+2022-06-09 14:17:28,745 - REGRESSION-LEARNING-INFO  - ========= Method: PCA3 =========
+2022-06-09 14:17:28,745 - REGRESSION-LEARNING-INFO  - Reducing dimensionality using PCA
+2022-06-09 14:17:28,745 - REGRESSION-LEARNING-INFO  - Removing columns with missing data more than 10%
+2022-06-09 14:17:28,746 - REGRESSION-LEARNING-INFO  - Replacing empty data using KNN Imputer method
+2022-06-09 14:17:28,812 - REGRESSION-LEARNING-INFO  - Processing Outliers
+2022-06-09 14:17:28,820 - REGRESSION-LEARNING-DEBUG - Dropping 12 outliers from 'Life expectancy' 
+2022-06-09 14:17:28,820 - REGRESSION-LEARNING-DEBUG - Dropping 82 outliers from 'Adult Mortality' 
+2022-06-09 14:17:28,820 - REGRESSION-LEARNING-DEBUG - Dropping 315 outliers from 'infant deaths' 
+2022-06-09 14:17:28,820 - REGRESSION-LEARNING-DEBUG - Dropping 1 outliers from 'Alcohol' 
+2022-06-09 14:17:28,821 - REGRESSION-LEARNING-DEBUG - Dropping 389 outliers from 'percentage expenditure' 
+2022-06-09 14:17:28,821 - REGRESSION-LEARNING-DEBUG - Dropping column Measles as it has 542 outliers ie > 5%
+2022-06-09 14:17:28,822 - REGRESSION-LEARNING-DEBUG - Dropping 394 outliers from 'under-five deaths' 
+2022-06-09 14:17:28,822 - REGRESSION-LEARNING-DEBUG - Dropping 280 outliers from 'Polio' 
+2022-06-09 14:17:28,822 - REGRESSION-LEARNING-DEBUG - Dropping 37 outliers from 'Total expenditure' 
+2022-06-09 14:17:28,822 - REGRESSION-LEARNING-DEBUG - Dropping 300 outliers from 'Diphtheria' 
+2022-06-09 14:17:28,822 - REGRESSION-LEARNING-DEBUG - Dropping column HIV/AIDS as it has 542 outliers ie > 5%
+2022-06-09 14:17:28,823 - REGRESSION-LEARNING-DEBUG - Dropping 89 outliers from 'thinness  1-19 years' 
+2022-06-09 14:17:28,823 - REGRESSION-LEARNING-DEBUG - Dropping 99 outliers from 'thinness 5-9 years' 
+2022-06-09 14:17:28,823 - REGRESSION-LEARNING-DEBUG - Dropping 132 outliers from 'Income composition of resources' 
+2022-06-09 14:17:28,823 - REGRESSION-LEARNING-DEBUG - Dropping 40 outliers from 'Schooling' 
+2022-06-09 14:17:28,823 - REGRESSION-LEARNING-INFO  - Total outliers removed are 1244
+2022-06-09 14:17:28,823 - REGRESSION-LEARNING-INFO  - One hot encoding discrete columns which has < 8 unique values
+2022-06-09 14:17:28,824 - REGRESSION-LEARNING-DEBUG - Number of unique values of Country are 166
+2022-06-09 14:17:28,824 - REGRESSION-LEARNING-DEBUG - Number of unique values of Year are 16
+2022-06-09 14:17:28,824 - REGRESSION-LEARNING-DEBUG - Number of unique values of Status are 2
+2022-06-09 14:17:28,824 - REGRESSION-LEARNING-INFO  - Encoding 'Status' column
+2022-06-09 14:17:28,831 - REGRESSION-LEARNING-INFO  - Variance ratio : [0.88454714 0.10483052 0.0048333 ]
+2022-06-09 14:17:28,831 - REGRESSION-LEARNING-INFO  - Formulating R2 using PCA3
+2022-06-09 14:17:29,163 - REGRESSION-LEARNING-INFO  - ========= Method: PCA4 =========
+2022-06-09 14:17:29,163 - REGRESSION-LEARNING-INFO  - Reducing dimensionality using PCA
+2022-06-09 14:17:29,163 - REGRESSION-LEARNING-INFO  - Removing columns with missing data more than 10%
+2022-06-09 14:17:29,164 - REGRESSION-LEARNING-INFO  - Replacing empty data using KNN Imputer method
+2022-06-09 14:17:29,242 - REGRESSION-LEARNING-INFO  - Processing Outliers
+2022-06-09 14:17:29,251 - REGRESSION-LEARNING-DEBUG - Dropping 12 outliers from 'Life expectancy' 
+2022-06-09 14:17:29,251 - REGRESSION-LEARNING-DEBUG - Dropping 82 outliers from 'Adult Mortality' 
+2022-06-09 14:17:29,251 - REGRESSION-LEARNING-DEBUG - Dropping 315 outliers from 'infant deaths' 
+2022-06-09 14:17:29,251 - REGRESSION-LEARNING-DEBUG - Dropping 1 outliers from 'Alcohol' 
+2022-06-09 14:17:29,251 - REGRESSION-LEARNING-DEBUG - Dropping 389 outliers from 'percentage expenditure' 
+2022-06-09 14:17:29,251 - REGRESSION-LEARNING-DEBUG - Dropping column Measles as it has 542 outliers ie > 5%
+2022-06-09 14:17:29,252 - REGRESSION-LEARNING-DEBUG - Dropping 394 outliers from 'under-five deaths' 
+2022-06-09 14:17:29,252 - REGRESSION-LEARNING-DEBUG - Dropping 280 outliers from 'Polio' 
+2022-06-09 14:17:29,253 - REGRESSION-LEARNING-DEBUG - Dropping 37 outliers from 'Total expenditure' 
+2022-06-09 14:17:29,253 - REGRESSION-LEARNING-DEBUG - Dropping 300 outliers from 'Diphtheria' 
+2022-06-09 14:17:29,253 - REGRESSION-LEARNING-DEBUG - Dropping column HIV/AIDS as it has 542 outliers ie > 5%
+2022-06-09 14:17:29,253 - REGRESSION-LEARNING-DEBUG - Dropping 89 outliers from 'thinness  1-19 years' 
+2022-06-09 14:17:29,253 - REGRESSION-LEARNING-DEBUG - Dropping 99 outliers from 'thinness 5-9 years' 
+2022-06-09 14:17:29,253 - REGRESSION-LEARNING-DEBUG - Dropping 132 outliers from 'Income composition of resources' 
+2022-06-09 14:17:29,253 - REGRESSION-LEARNING-DEBUG - Dropping 40 outliers from 'Schooling' 
+2022-06-09 14:17:29,254 - REGRESSION-LEARNING-INFO  - Total outliers removed are 1244
+2022-06-09 14:17:29,254 - REGRESSION-LEARNING-INFO  - One hot encoding discrete columns which has < 8 unique values
+2022-06-09 14:17:29,254 - REGRESSION-LEARNING-DEBUG - Number of unique values of Country are 166
+2022-06-09 14:17:29,255 - REGRESSION-LEARNING-DEBUG - Number of unique values of Year are 16
+2022-06-09 14:17:29,255 - REGRESSION-LEARNING-DEBUG - Number of unique values of Status are 2
+2022-06-09 14:17:29,255 - REGRESSION-LEARNING-INFO  - Encoding 'Status' column
+2022-06-09 14:17:29,262 - REGRESSION-LEARNING-INFO  - Variance ratio : [0.88454714 0.10483052 0.0048333  0.00339441]
+2022-06-09 14:17:29,262 - REGRESSION-LEARNING-INFO  - Formulating R2 using PCA4
+2022-06-09 14:17:29,650 - REGRESSION-LEARNING-INFO  - ========= Method: PCA5 =========
+2022-06-09 14:17:29,650 - REGRESSION-LEARNING-INFO  - Reducing dimensionality using PCA
+2022-06-09 14:17:29,650 - REGRESSION-LEARNING-INFO  - Removing columns with missing data more than 10%
+2022-06-09 14:17:29,651 - REGRESSION-LEARNING-INFO  - Replacing empty data using KNN Imputer method
+2022-06-09 14:17:29,716 - REGRESSION-LEARNING-INFO  - Processing Outliers
+2022-06-09 14:17:29,724 - REGRESSION-LEARNING-DEBUG - Dropping 12 outliers from 'Life expectancy' 
+2022-06-09 14:17:29,724 - REGRESSION-LEARNING-DEBUG - Dropping 82 outliers from 'Adult Mortality' 
+2022-06-09 14:17:29,724 - REGRESSION-LEARNING-DEBUG - Dropping 315 outliers from 'infant deaths' 
+2022-06-09 14:17:29,724 - REGRESSION-LEARNING-DEBUG - Dropping 1 outliers from 'Alcohol' 
+2022-06-09 14:17:29,724 - REGRESSION-LEARNING-DEBUG - Dropping 389 outliers from 'percentage expenditure' 
+2022-06-09 14:17:29,724 - REGRESSION-LEARNING-DEBUG - Dropping column Measles as it has 542 outliers ie > 5%
+2022-06-09 14:17:29,725 - REGRESSION-LEARNING-DEBUG - Dropping 394 outliers from 'under-five deaths' 
+2022-06-09 14:17:29,725 - REGRESSION-LEARNING-DEBUG - Dropping 280 outliers from 'Polio' 
+2022-06-09 14:17:29,726 - REGRESSION-LEARNING-DEBUG - Dropping 37 outliers from 'Total expenditure' 
+2022-06-09 14:17:29,726 - REGRESSION-LEARNING-DEBUG - Dropping 300 outliers from 'Diphtheria' 
+2022-06-09 14:17:29,726 - REGRESSION-LEARNING-DEBUG - Dropping column HIV/AIDS as it has 542 outliers ie > 5%
+2022-06-09 14:17:29,726 - REGRESSION-LEARNING-DEBUG - Dropping 89 outliers from 'thinness  1-19 years' 
+2022-06-09 14:17:29,726 - REGRESSION-LEARNING-DEBUG - Dropping 99 outliers from 'thinness 5-9 years' 
+2022-06-09 14:17:29,726 - REGRESSION-LEARNING-DEBUG - Dropping 132 outliers from 'Income composition of resources' 
+2022-06-09 14:17:29,727 - REGRESSION-LEARNING-DEBUG - Dropping 40 outliers from 'Schooling' 
+2022-06-09 14:17:29,727 - REGRESSION-LEARNING-INFO  - Total outliers removed are 1244
+2022-06-09 14:17:29,728 - REGRESSION-LEARNING-INFO  - One hot encoding discrete columns which has < 8 unique values
+2022-06-09 14:17:29,728 - REGRESSION-LEARNING-DEBUG - Number of unique values of Country are 166
+2022-06-09 14:17:29,728 - REGRESSION-LEARNING-DEBUG - Number of unique values of Year are 16
+2022-06-09 14:17:29,728 - REGRESSION-LEARNING-DEBUG - Number of unique values of Status are 2
+2022-06-09 14:17:29,728 - REGRESSION-LEARNING-INFO  - Encoding 'Status' column
+2022-06-09 14:17:29,735 - REGRESSION-LEARNING-INFO  - Variance ratio : [0.88454714 0.10483052 0.0048333  0.00339441 0.00187308]
+2022-06-09 14:17:29,735 - REGRESSION-LEARNING-INFO  - Formulating R2 using PCA5
+2022-06-09 14:17:30,152 - REGRESSION-LEARNING-INFO  - ==================  R2 Analysis Report  ================== 
+     Random State  Mode_or_Median  KNNImputer  ...  PCA3  PCA4  PCA5
+0               5            0.82        0.84  ...  0.61  0.61  0.60
+1               7            0.80        0.83  ...  0.55  0.55  0.57
+2               9            0.82        0.84  ...  0.58  0.58  0.61
+3              11            0.81        0.82  ...  0.68  0.68  0.67
+4              13            0.80        0.82  ...  0.56  0.56  0.57
+..            ...             ...         ...  ...   ...   ...   ...
+243           491            0.83        0.84  ...  0.63  0.63  0.65
+244           493            0.81        0.82  ...  0.56  0.56  0.58
+245           495            0.83        0.85  ...  0.50  0.50  0.52
+246           497            0.80        0.81  ...  0.45  0.45  0.49
+247           499            0.79        0.80  ...  0.54  0.54  0.58
+
+[248 rows x 10 columns]
+2022-06-09 14:17:30,156 - REGRESSION-LEARNING-INFO  - ==================  Highest R2 Values ==================
+       Method Used  Random State  Max R2
+0   Mode_or_Median           269    0.86
+1       KNNImputer            31    0.86
+2    Normalisation            31    0.86
+3  Standardisation            31    0.86
+4             PCA1            77    0.18
+5             PCA2           209    0.61
+6             PCA3            11    0.68
+7             PCA4            11    0.68
+8             PCA5           175    0.70
+2022-06-09 14:17:30,160 - REGRESSION-LEARNING-INFO  - ==================  Lowest R2 Values ==================
+       Method Used  Random State  Min R2
+0   Mode_or_Median           341    0.74
+1       KNNImputer           205    0.76
+2    Normalisation           205    0.76
+3  Standardisation           205    0.76
+4             PCA1           395   -0.03
+5             PCA2           237    0.23
+6             PCA3           159    0.40
+7             PCA4           159    0.40
+8             PCA5           159    0.43
+
