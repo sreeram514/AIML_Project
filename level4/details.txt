@@ -1,0 +1,25 @@
+1. 
+https://archive.ics.uci.edu/ml/datasets/Credit+Approval
+
+
+For the classification problem above clean the data including imputation, and perform classification with as many hyperparameters and algorithms as possible, and perform different tup
+Try as many ensemble methods as possible.
+
+
+2. For the same dataset take a subset of input columns and perform clustering of as many types as possible. 
+
+
+
+3. https://archive.ics.uci.edu/ml/datasets/Automobile
+
+
+For the regression problem above clean the data including imputation, and perform regression with as many hyperparameters and algorithms as possible
+
+4. Look at the images of flags of different countries at 
+https://drive.google.com/drive/folders/1B0Pm550LPhl8FU92CHIIdP0sgxHesmeu?usp=share_link
+
+Download and develop CNN based image classifier, both custom and with use of transfer learning in full, or by chopping off few layers of the pre trained model. On the classifier try inference on sample flag images.
+
+5. For the sequence data of any single stock from https://www.kaggle.com/datasets/rohanrao/nifty50-stock-market-data?resource=download 
+
+and make LSTM based sequence prediction based on same.
