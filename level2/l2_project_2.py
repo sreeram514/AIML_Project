@@ -6,7 +6,7 @@ from math import sqrt
 from sklearn import linear_model
 from sklearn.decomposition import PCA
 from sklearn.impute import KNNImputer
-from sklearn.metrics import r2_score
+from sklearn.metrics import r2_score, mean_squared_error
 from sklearn.model_selection import train_test_split
 
 import log_init as log
